@@ -8,12 +8,12 @@ body {
   margin: 0 auto;
   float:none !important;
   margin-top: 15px;
+  overflow: hidden;
 }
 
 
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 30px;
 }
 
 .header h3{
@@ -62,24 +62,47 @@ body {
 }
 
 .row {
+  display: table;
+  height: auto;
+  width: 100%;
+  text-align: center;
   border-bottom: 1px solid #e5e5e5;
   margin: 0 !important;
+  padding: 15px 0;
+}
+
+.row div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.row p {
+  height: auto;
+  text-align: center;
+  animation-name: slidein;
+  animation-duration: 3s;
+  margin: 0;
 }
 
 .projects {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 85%;
   margin-top: 15px;
+  animation-name: fadein;
+  animation-duration: 4s;
 }
 
 .project {
-  float: left;
+  /* float: left; */
   width: 50%;
   max-width: 500px;
   border-top: 1px solid #EEE;
   border-left: 1px solid #EEE;
   border-radius: 25px;
-  margin: 15px;
+  /* margin: 15px; */
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -133,4 +156,26 @@ a {
   text-decoration: none;
   color: #337ab7;
   background-color: transparent;
+}
+
+/* Animations */
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
