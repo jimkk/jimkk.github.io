@@ -6,7 +6,7 @@ body {
 
 .container {
   margin: 0 auto;
-  float:none !important;
+  float:none;
   margin-top: 15px;
   overflow: hidden;
 }
@@ -67,7 +67,7 @@ body {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-  margin: 0 !important;
+  margin: 0;
   padding: 15px 0;
 }
 
@@ -89,21 +89,22 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   width: 85%;
-  margin-top: 15px;
+  margin-top: 25px;
   animation-name: fadein;
   animation-duration: 4s;
 }
 
 .project {
-  /* float: left; */
   width: 50%;
-  max-width: 500px;
+  max-width: 400px;
+  min-width: 300px;
   border-top: 1px solid #EEE;
   border-left: 1px solid #EEE;
   border-radius: 25px;
-  /* margin: 15px; */
   margin: 0 auto;
-  padding: 10px;
+  margin-bottom: 20px;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 .project:hover {
@@ -111,15 +112,27 @@ body {
 }
 
 .project h3 {
+  text-align: center;
   margin-left: 5px;
+  text-decoration: underline;
+}
+
+.project figure {
+  height: 60%;
+  width: 100%;
 }
 
 .project img {
-  width: 95%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 24px;
   margin: 0 auto;
   display: block;
   padding: 10px 0;
+}
+
+.project .description {
+  text-align: center;
 }
 
 .project a {
